@@ -20,19 +20,20 @@
           </div>
           <div class="product-info">
             <h1>{{ productName }}</h1>
-            <p v-if="inventry > 0">In Stock</p>
+            <p v-if="inStock">In Stock</p>
             <p v-else >Out Of Stock</p>
             <ul>
-                <li v-for="details in product_deatils">{{ details }}</li>
+                <li v-for="detail in product_deatils">{{ detail }}</li>
             </ul>
             <ul>
-                <li v-for="color in product_id_color" 
-                    @mouseover="updateImage(color.image)"
+                <li v-for="(color,index) in product_id_color" 
+                    @mouseover="updateVariaint(index)"
                     class="color-circle":style="{backgroundColor:color.color}">
                 </li>
             </ul>
-            <div class="button">
-                <button class="single_button" v-on:click="addToCart" :disabled="!this.inventry">+</button>
+            
+                <div class="button">
+                <button class="single_button" v-on:click="addToCart" :disabled="!inStock">+</button>
                 Add to cart
                 <button class="single_button" v-on:click="reduceToCart" :disabled="!this.cart">-</button>
             </div>
