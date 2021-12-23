@@ -1,4 +1,5 @@
 <template>
+<div>
  <h1>Hello {{ names[0] }}</h1>
  <p v-text="age"></p>
  <p v-html="details"></p>
@@ -21,6 +22,8 @@
    <h2>{{ actor.name }}</h2>
    <h3 v-for="movie in actor.movieName" :key="movie">{{ movie }}</h3>
  </div>
+</div>
+<h1>sum is {{ addTwoNumber(3,5)}}</h1>
 </template>
 
 <script>
@@ -29,6 +32,7 @@ export default {
   name: 'App',
   data(){
     return{
+
       names :['saiful','Aamin','Rohan'],
       fullName :[
         {first:'saiful',last:'islam'},
@@ -60,6 +64,12 @@ export default {
         padding:'10px'
       },
       num:8
+    }
+  },
+  methods:{
+    addTwoNumber(a,b){
+      var add = a+b;
+      return add
     }
   }
 }
