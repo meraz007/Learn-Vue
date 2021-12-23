@@ -1,5 +1,5 @@
 <template>
- <h1>Hello {{ name }}</h1>
+ <h1>Hello {{ names[0] }}</h1>
  <p v-text="age"></p>
  <p v-html="details"></p>
  <button :disabled="!isDisabled">Bind</button>
@@ -12,6 +12,15 @@
  <h1 v-else-if="num >0">The number is greater then 0 and number is: {{ num }}</h1>
  <h1 v-else>This is not a number,this is a {{ num }}</h1>
  <h1 v-show="isDisabled">v-show conditional randaring</h1>
+ <ul>
+   <li v-for="(name,index) in names" :key="name">{{index}}{{name}}</li>
+ </ul>
+ <h1 v-for="name in fullName" :key="name">{{ name.first}} {{ name.last }}</h1>
+
+ <div v-for="actor in actors" :key="actor.name">
+   <h2>{{ actor.name }}</h2>
+   <h3 v-for="movie in actor.movieName" :key="movie">{{ movie }}</h3>
+ </div>
 </template>
 
 <script>
@@ -20,7 +29,21 @@ export default {
   name: 'App',
   data(){
     return{
-      name :'saiful',
+      names :['saiful','Aamin','Rohan'],
+      fullName :[
+        {first:'saiful',last:'islam'},
+        {first:"Aamin",last:'Khan'}
+      ],
+      actors:[
+        {
+          name:'Chirstian Bale',
+          movieName :['BatMan','prestige']
+        },
+        {
+          name:'Di Capario',
+          movieName:['Taitanic','Inception']
+        }
+      ],
       age :'He is ' + 25 +' years old',
       details : '<b>My life is a fucking Awesome!</b>',
       headingId : 'Heading',
