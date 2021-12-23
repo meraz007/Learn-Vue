@@ -24,6 +24,11 @@
  </div>
 </div>
 <h1>sum is {{ addTwoNumber(3,5)}}</h1>
+<h1>{{ cgrt }}</h1>
+<button @click="changeBrand">change the brand</button>
+<p>{{ num }}</p>
+<button @click="increment"> + </button>
+<button @click="decriment">-</button>
 </template>
 
 <script>
@@ -63,13 +68,23 @@ export default {
       anotherStyleObj:{
         padding:'10px'
       },
-      num:8
+      num:8,
+      cgrt:'banson'
     }
   },
   methods:{
     addTwoNumber(a,b){
       var add = (a+b) * this.methodsNumber;
       return add
+    },
+    increment(){
+      return this.num +=1
+    },
+    decriment(){
+      return this.num -=1
+    },
+    changeBrand(){
+      return this.cgrt=this.names[0] 
     }
   }
 }
