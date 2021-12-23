@@ -7,6 +7,11 @@
  <button >Click</button>
  <h2 :style="{color:heighlightColor,'font-size':fontSize + 'px'}">This is our another Heading</h2>
  <h3 :style="[successStyleObj,anotherStyleObj]">This is inline style binding</h3>
+
+ <h1 v-if="num<0">The number is less then 0 and number is: {{ num }}</h1>
+ <h1 v-else-if="num >0">The number is greater then 0 and number is: {{ num }}</h1>
+ <h1 v-else>This is not a number,this is a {{ num }}</h1>
+ <h1 v-show="isDisabled">v-show conditional randaring</h1>
 </template>
 
 <script>
@@ -30,7 +35,8 @@ export default {
       },
       anotherStyleObj:{
         padding:'10px'
-      }
+      },
+      num:8
     }
   }
 }
