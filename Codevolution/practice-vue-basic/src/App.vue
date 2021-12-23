@@ -1,6 +1,7 @@
 <template>
  <h1>Hello {{ name }}</h1>
  <p v-text="age"></p>
+ <p v-html="details"></p>
 </template>
 
 <script>
@@ -10,7 +11,8 @@ export default {
   data(){
     return{
       name :'saiful',
-      age :'He is ' + 25 +' years old'
+      age :'He is ' + 25 +' years old',
+      details : '<b>My life is a fucking Awesome!</b>'
     }
   }
 }
