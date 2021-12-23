@@ -5,7 +5,8 @@
  <button :disabled="!isDisabled">Bind</button>
  <p :class="[isPromoted ? 'color':'new']" >this is a paragraph</p>
  <button >Click</button>
- 
+ <h2 :style="{color:heighlightColor,'font-size':fontSize + 'px'}">This is our another Heading</h2>
+ <h3 :style="[successStyleObj,anotherStyleObj]">This is inline style binding</h3>
 </template>
 
 <script>
@@ -19,7 +20,17 @@ export default {
       details : '<b>My life is a fucking Awesome!</b>',
       headingId : 'Heading',
       isDisabled : true,
-      isPromoted :true
+      isPromoted :true,
+      heighlightColor : 'red',
+      fontSize : 50,
+      successStyleObj :{
+        color:'success',
+        background:'black',
+        fontSize:'40px'
+      },
+      anotherStyleObj:{
+        padding:'10px'
+      }
     }
   }
 }
