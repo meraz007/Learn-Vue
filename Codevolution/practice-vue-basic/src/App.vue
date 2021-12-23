@@ -32,7 +32,7 @@ export default {
   name: 'App',
   data(){
     return{
-
+      methodsNumber :10,
       names :['saiful','Aamin','Rohan'],
       fullName :[
         {first:'saiful',last:'islam'},
@@ -68,7 +68,7 @@ export default {
   },
   methods:{
     addTwoNumber(a,b){
-      var add = a+b;
+      var add = (a+b) * this.methodsNumber;
       return add
     }
   }
