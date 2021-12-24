@@ -69,7 +69,8 @@ export default {
         padding:'10px'
       },
       num:8,
-      cgrt:'banson'
+      cgrt:'banson',
+      items: ['mouse', 'bull', 'tiger', 'rabbit', 'pig', 'cat', 'dog', 'horse']
     }
   },
   methods:{
@@ -85,7 +86,8 @@ export default {
     },
     changeBrand(){
       return this.cgrt=this.names[0] 
-    }
+    },
+
   }
 }
 </script>
