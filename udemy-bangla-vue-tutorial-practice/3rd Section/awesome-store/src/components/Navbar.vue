@@ -1,7 +1,7 @@
 <template>
   <b-navbar toggleable="lg" type="dark" variant="dark">
     <div class="container">
-      <b-navbar-brand href="#">NavBar</b-navbar-brand>
+      <b-navbar-brand href="#">EasyDay Shopping </b-navbar-brand>
       <form class="form-inline my-2 my-lg-0">
       <div class="input-group">
         <input class="form-control" id="address-bar" type="search" placeholder="Search" aria-label="Search">

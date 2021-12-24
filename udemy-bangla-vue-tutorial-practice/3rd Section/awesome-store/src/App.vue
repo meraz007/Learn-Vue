@@ -5,7 +5,7 @@
   <b-container class="bv-example-row mt-4">
   <b-row>
     <b-col cols="9">
-      <inventory></inventory>
+      <inventory :items='items'></inventory>
     </b-col>
     <b-col cols="3">
       <Cart></Cart> 
@@ -19,11 +19,21 @@
 import Navbar from './components/Navbar.vue'
 import Cart from './components/Cart.vue'
 import Inventory from './components/Inventory.vue'
+import data from './data.js'
+
 export default {
   components:{
     Navbar,
     Cart,
     Inventory
+  },
+  data(){
+    return{
+      items:[]
+    }
+  },
+  mounted(){
+    this.items=data
   }
 }
 </script>
