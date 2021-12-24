@@ -1,7 +1,8 @@
 <template>
 <b-list-group>
     <b-list-group-item>Name - Price </b-list-group-item>
-    <b-list-group-item v-for="(item,index) in items" :key="index">{{ item.title }}-{{item.price}}</b-list-group-item>
+    <b-list-group-item v-for="(item,index) in items" :key="index">{{ item.title }}-{{item.price}} <button class="
+    btn btn-danger" @click="removeItem(index)">x</button> </b-list-group-item>
     <b-list-group-item>Total {{ totalPrice }}</b-list-group-item>
     
 </b-list-group>
@@ -18,6 +19,11 @@ export default {
                 total +=parseFloat(item.price) 
             });
             return total
+        }
+    },
+    methods:{
+        removeItem(index){
+            this.items.splice(index,1)
         }
     }
 
