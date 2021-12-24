@@ -1,28 +1,31 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+   <div>
+  <b-navbar toggleable="lg" type="dark" variant="dark">
+    <div class="container">
+      <b-navbar-brand href="#">NavBar</b-navbar-brand>
+      <form class="form-inline my-2 my-lg-0">
+      <div class="input-group">
+        <input class="form-control" id="address-bar" type="search" placeholder="Search" aria-label="Search">
+        <div class="input-group-append mx-2">
+        <button class="btn btn-outline-light" type="submit">Search</button>
+        </div>
+      </div>
+</form>
+      <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
+    </div>
+     </b-navbar>
+</div>
+
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
 
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+
 </style>
