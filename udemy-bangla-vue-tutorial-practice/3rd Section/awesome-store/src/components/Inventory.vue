@@ -13,7 +13,7 @@
           >
             <b-card-text>{{ item.price }}</b-card-text>
 
-            <b-button href="#" variant="primary">Add to Cart</b-button>
+            <b-button @click="addToItem(item)" variant="primary">Add to Cart</b-button>
           </b-card>
           </div>
         </b-col>
@@ -22,7 +22,12 @@
 
 <script>
 export default {
-  props:['items']
+  props:['items'],
+  methods:{
+    addToItem(item){
+      this.$emit('newItemAdded',item)
+    }
+  }
 }
 </script>
 

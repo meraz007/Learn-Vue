@@ -5,10 +5,10 @@
   <b-container class="bv-example-row mt-4">
   <b-row>
     <b-col cols="9">
-      <inventory :items='items'></inventory>
+      <inventory @newItemAdded="addToCart" :items='items'></inventory>
     </b-col>
     <b-col cols="3">
-      <Cart></Cart> 
+      <Cart :items='cart'></Cart> 
     </b-col>
   </b-row>
 </b-container>
@@ -29,11 +29,17 @@ export default {
   },
   data(){
     return{
-      items:[]
+      items:[],
+      cart:[]
     }
   },
   mounted(){
     this.items=data
+  },
+  methods:{
+    addToCart(item){
+      this.cart.push(item)
+    }
   }
 }
 </script>
