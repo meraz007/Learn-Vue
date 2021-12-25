@@ -25,7 +25,7 @@ export default {
   props:['items'],
   methods:{
     addToItem(item){
-      this.$emit('newItemAdded',item)
+      this.$emit('addedNewItem',item)
     }
   }
 }

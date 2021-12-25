@@ -1,14 +1,14 @@
 <template>
   <div id="app">
-  <navbar></navbar>
+  <navbar @search="search"></navbar>
   <!--Card Section-->
   <b-container class="bv-example-row mt-4">
   <b-row>
     <b-col cols="9">
-      <inventory @newItemAdded="addToCart" :items='items'></inventory>
+      <inventory @addedNewItem="addCartItem"  :items='items'></inventory>
     </b-col>
     <b-col cols="3">
-      <Cart :items='cart'></Cart> 
+      <Cart :items='cart' ></Cart> 
     </b-col>
   </b-row>
 </b-container>
@@ -37,9 +37,14 @@ export default {
     this.items=data
   },
   methods:{
-    addToCart(item){
+    addCartItem(item){
       this.cart.push(item)
-    }
+    },
+    search(keyword){
+      this.items=data.filter(item =>{
+        return item.title.toLowerCase().indexOf(keyword.toLowerCase()) !==-1
+      })
+    },
   }
 }
 </script>

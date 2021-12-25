@@ -11,7 +11,7 @@
 
 <script>
 export default {
-    props :['items'],
+    props:['items'],
     computed:{
         totalPrice(){
             var total =0;
