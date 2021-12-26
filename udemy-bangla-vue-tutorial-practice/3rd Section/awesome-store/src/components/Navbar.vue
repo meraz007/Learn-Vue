@@ -1,7 +1,7 @@
 <template>
   <b-navbar toggleable="lg" type="dark" variant="dark">
     <div class="container">
-      <b-navbar-brand href="#">EasyDay Shopping </b-navbar-brand>
+      <b-navbar-brand  >EasyDay Shopping </b-navbar-brand>
       <form @submit.prevent="search" class="form-inline my-2 my-lg-0">
       <div class="input-group">
         <input class="form-control" id="address-bar" type="search" placeholder="Search" aria-label="Search" v-model="keyword">
