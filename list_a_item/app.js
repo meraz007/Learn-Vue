@@ -18,6 +18,7 @@
  Vue.createApp ({
      data(){
          return {
+             counter:0,
              goals:[],
              enteredValue :''  
          };
@@ -26,6 +27,15 @@
         addGoal(){
              this.goals.push(this.enteredValue);
              this.enteredValue=''
+         },
+         counterNumber(){
+            this.counter +=1
+            if(this.counter ==11){
+                do{
+                    this.counter =this.counter -1
+                }
+                while(this.counter >0)
+            }
          }
      }
  }).mount('#app');
