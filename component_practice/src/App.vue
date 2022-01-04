@@ -1,8 +1,7 @@
 <template>
   <div id="app">
-    <Header/>
-    <h1>{{ name }}</h1>
-    <Footer/>
+    <Header :myStudents="students"/>
+    <Footer :myStudents="students" />
   </div>
 </template>
 
@@ -14,7 +13,7 @@ export default {
   name: 'App',
   data(){
     return{
-      name:'saiful'
+      students:['saiful','Aamin','Kader']
     }
   },
   components: {
