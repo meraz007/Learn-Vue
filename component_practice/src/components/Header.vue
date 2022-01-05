@@ -1,12 +1,8 @@
 <template>
   <div>
-      <ul class="nav nav-pills nav-dark">
-        <li class="nav-item">
-            <router-link class="nav-link" to="/">Home</router-link>
-        </li>
-        <li class="nav-item">
-            <router-link class="nav-link" to="/customer">Customer</router-link>
-        </li>
+      <ul class="nav nav-pills bg-primary">
+        <router-link tag="li" class="nav-item nav-link text-white" to="/">Home</router-link>
+        <router-link tag="li" class=" nav-item nav-link text-white" to="/customer">Customer</router-link>
     </ul>
   </div>
 </template>
@@ -18,5 +14,7 @@ export default {
 </script>
 
 <style>
-
+li{
+  cursor: pointer;
+}
 </style>
