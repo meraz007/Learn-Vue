@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     <div class="container">
+      <Header />
       <transition name="appear">
         <div class="bg-success" v-if="display">
         <h1 class="text-white">Headding</h1>
@@ -11,15 +12,20 @@
         class="btn btn-info"
         @click="changeHeading"
          >Toggle</button>
+         <hr>
+         <router-view></router-view>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-
+import Header from './components/Header.vue'
 export default {
   name: 'App',
+  components:{
+    Header
+  },
   data(){
     return{
       display:false
