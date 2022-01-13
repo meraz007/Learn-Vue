@@ -7,6 +7,7 @@ window.$ =window.jQuery =require('jquery')
 
 import 'bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css'
+import 'bootstrap-icons/font/bootstrap-icons.css'
 
 Vue.config.productionTip = false;
 
