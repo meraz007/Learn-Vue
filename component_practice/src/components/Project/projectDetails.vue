@@ -7,7 +7,7 @@
 
 <script>
 export default {
-    name:'projectDetails',
+    name:'projectDetails', 
     props:['items']
 
 }
