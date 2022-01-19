@@ -1,30 +1,18 @@
-import Home from '../components/home'
-import Customer from '../components/Customer/customer'
-import CustomerDetail from '../components/Customer/customerDetail'
-import CustomerStart from '../components/Customer/customerStart'
-import CustomerEdit from '../components/Customer/customerEdit'
+import Home from '../view/Home.vue'
+import Project from '../view/Project.vue'
+import ProjectDetails from '../components/Project/projectDetails.vue'
 export const routes=[
     {
         path:'',
         component:Home
     },
     {
-        path:'/customer',
-        component:Customer,
-        children:[
-            {
-                path:'',
-                component:CustomerStart
-            },
-            {
-                path:':id',
-                component:CustomerDetail
-            },
-            {
-                path:':id/edit',
-                component:CustomerEdit,
-                name:'customerEdit'
-            }
-        ]
-    }
+        path:'/project',
+        component:Project,  
+    },
+    {
+        path:'/ProjectDetails/:id',
+        component:ProjectDetails,  
+    },
+ 
 ]

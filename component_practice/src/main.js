@@ -9,8 +9,8 @@ Vue.use(VueRouter)
 Vue.config.productionTip = false
 const router =new VueRouter({
   routes,
-  mode:'history'
 })
+
 
 new Vue({
   render: h => h(App),
