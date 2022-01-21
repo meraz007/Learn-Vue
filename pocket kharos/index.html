@@ -12,7 +12,18 @@
             <div class="row d-flex justify-content-center py-4">
                 <div class="col-md-6 border p-4 border-secondary">
                     <h1 class="text-center">Daily Pocket Kharos List</h1>
-                    <input class="p-2 form-control mb-2" type="text">
+                    <form class="row" @submit.prevent="addItem">
+                        <div class="col-md-6">
+                            <input class="p-2 form-control mb-2" type="text" placeholder="Item" v-model="Atitle">
+                        </div>
+                        <div class="col-md-4">
+                            <input type="number" class="p-2 form-control mb-2" placeholder="price"
+                            v-model="Bprice">
+                        </div>
+                        <div class="col-md-2">
+                            <input type="submit" class="btn btn-primary mb-2" value="Submit"> 
+                        </div>
+                    </form>
                     <ul class="list-group">
                         <li class="list-group-item">
                             <div class="fw-bold float-start">Item</div>
@@ -37,12 +48,18 @@
                         {title:'Cigarette',price:40},
                         {title:'Tea & Snakes',price:30},
                         {title:'Bus Rent',price:20}
-                    ]
+                    ],
+                        Atitle:'',
+                        Bprice:''
+                        
                 }
             },
             methods:{
                 remove(index){
                     this.items.splice(index,1)
+                },
+                addItem(){
+                    this.items.push({title:this.Atitle,price:this.Bprice})
                 }
             },
             computed:{
