@@ -30,7 +30,7 @@ export default {
         fetchItemDeatils(){
             var self=this
             axios.get('http://localhost:3000/item/'+ this.$route.params.id).then(response =>{
-                self.item=response.data
+            self.item=response.data
             })
         },
         addItem(item){

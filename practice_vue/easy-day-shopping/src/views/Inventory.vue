@@ -21,7 +21,7 @@ import axios from 'axios'
 export default {
     data(){
         return{
-          counter:0
+          
         }
     },
     computed:{
